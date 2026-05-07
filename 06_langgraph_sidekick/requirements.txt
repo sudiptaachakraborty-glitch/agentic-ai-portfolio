@@ -1,0 +1,11 @@
+langgraph>=0.2.50
+langchain-openai>=0.2.0
+langchain-community>=0.3.0
+langchain-experimental>=0.3.0
+playwright>=1.48.0
+gradio>=5.0.0
+python-dotenv>=1.0.1
+google-search-results>=2.4.0
+wikipedia>=1.4.0
+pushover-complete>=1.1.0
+sqlmodel>=0.0.22

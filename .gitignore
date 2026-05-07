@@ -1,0 +1,54 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# Virtual envs
+.venv/
+venv/
+env/
+ENV/
+
+# Env / secrets
+.env
+.env.local
+*.key
+*.pem
+
+# uv / poetry caches
+.uv-cache/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Course state files we deliberately don't ship
+*.db
+*.db-shm
+*.db-wal
+memory.db*
+tickets.db*
+01_career_digital_twin/me/*.pdf
+01_career_digital_twin/me/*.txt
+
+# Notebook checkpoints
+.ipynb_checkpoints/
+
+# Local outputs
+04_stock_picker/output/*
+05_engineering_team/output/
+!04_stock_picker/output/.gitkeep
+
+# Hugging Face Spaces local sync
+.huggingface/

@@ -1,0 +1,7 @@
+# Use:  crewai run         (preferred)
+# Or:   uv sync            (uses pyproject.toml)
+crewai>=0.130.0
+crewai-tools>=0.36.0
+openai>=1.51.0
+pushover-complete>=1.1.0
+python-dotenv>=1.0.1

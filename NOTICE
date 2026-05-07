@@ -1,0 +1,29 @@
+Agentic AI Portfolio — Sudipta Chakraborty
+==========================================
+
+This repository contains my hands-on implementations of the eight projects
+from "AI Engineer Agentic Track: The Complete Agent & MCP Course" by
+Ed Donner on Udemy.
+
+Substantial portions of the source code are derived from Ed Donner's
+publicly available companion repository at https://github.com/ed-donner/agents
+(MIT License, Copyright (c) 2025 Ed Donner). The original LICENSE file is
+preserved in this repo as `LICENSE.upstream`.
+
+What I have done in this repository:
+  * Restructured the six course weeks into eight self-contained, named
+    projects with their own READMEs and run instructions.
+  * Authored top-level and per-project documentation, deployment guides,
+    architecture diagrams, and Hugging Face Space configurations.
+  * Replaced personal data files (the `me/` directory in the original
+    Career Digital Twin) with templates so each user can plug in their own
+    bio and CV.
+  * Added `.env.example` files and explicit secret/key handling notes.
+  * Added small extensions and quality-of-life changes (documented per
+    project in each README's "My additions" section).
+
+Use of frontier-model APIs (OpenAI, Anthropic, Google Gemini, etc.) is
+subject to the providers' terms of service and incurs their charges; you
+must supply your own API keys.
+
+This is a learning portfolio, not production software.
