@@ -52,3 +52,10 @@ tickets.db*
 
 # Hugging Face Spaces local sync
 .huggingface/
+
+# Generated outputs from CrewAI runs (committed examples preserved
+# explicitly under 05_engineering_team/example_output_*)
+04_stock_picker/memory/
+04_stock_picker/output/
+04_stock_picker/report.md
+04_stock_picker/_companion_financial_researcher/output/
