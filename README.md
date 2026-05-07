@@ -29,16 +29,16 @@ The eight projects below show the patterns and primitives I'm using to build the
 
 | # | Project | What it shows | Stack | Live demo |
 |---|---|---|---|---|
-| 1 | [Career Digital Twin](./01_career_digital_twin) | RAG-backed agent that role-plays you on your website; logs unanswered questions and captures lead emails | OpenAI · Gradio · Pushover | [HF Space →](https://huggingface.co/spaces/) *(deploy guide)* |
+| 1 | [Career Digital Twin](./01_career_digital_twin) | RAG-backed agent that role-plays you on your website; logs unanswered questions and captures lead emails | OpenAI · Gradio · Pushover | **[▶ Live on HF Spaces](https://huggingface.co/spaces/Life1Ok/career-digital-twin)** |
 | 2 | [SDR (Sales Development Rep) Agent](./02_sdr_agent) | Multi-agent cold-email pipeline: drafter ↔ critic ↔ sender, with handoffs, tools, and guardrails | OpenAI Agents SDK · SendGrid | Notebook walkthrough |
-| 3 | [Deep Research Agent Team](./03_deep_research) | Planner → parallel web-search agents → writer → emailer; produces a sourced research report from one query | OpenAI Agents SDK · Gradio · Serper | [HF Space →](https://huggingface.co/spaces/) *(deploy guide)* |
+| 3 | [Deep Research Agent Team](./03_deep_research) | Planner → parallel web-search agents → writer → emailer; produces a sourced research report from one query | OpenAI Agents SDK · Gradio · Serper | **[▶ Live on HF Spaces](https://huggingface.co/spaces/Life1Ok/deep-research-agent)** |
 | 4 | [Stock Picker (Crew)](./04_stock_picker) | A CrewAI crew that scouts trending companies, deep-researches each, and recommends one — with structured-output schemas and memory | CrewAI · OpenAI · Pushover | CLI / `crewai run` |
 | 5 | [Multi-Agent Engineering Team (Crew)](./05_engineering_team) | A 4-agent software team (engineering lead · backend · frontend · QA) that designs and builds a working Python app from a spec | CrewAI · OpenAI · Gradio | CLI / `crewai run` |
 | 6 | [LangGraph Browser Sidekick](./06_langgraph_sidekick) | Stateful, persistent assistant with a Playwright-driven browser, push notifications, and an evaluator-optimizer loop | LangGraph · Playwright · Gradio · Pushover | [HF Space →](https://huggingface.co/spaces/) *(deploy guide)* |
-| 7 | [AutoGen Agent Creator](./07_autogen_creator) | An AutoGen agent that *writes other AutoGen agents* and runs them in a shared world (the meta-agent pattern) | AutoGen AgentChat + Core | Python script |
+| 7 | [AutoGen Agent Creator](./07_autogen_creator) | An AutoGen agent that *writes other AutoGen agents* and runs them in a shared world (the meta-agent pattern) | AutoGen AgentChat + Core | **[▶ Live on HF Spaces](https://huggingface.co/spaces/Life1Ok/autogen-agent-creator)** |
 | 8 | [Autonomous Trading Floor (capstone)](./08_autonomous_trading_floor) | Six AI traders running 24/7 in parallel, each with their own MCP servers (accounts, market, push, RAG memory). End-to-end MCP architecture | MCP · OpenAI Agents SDK · Polygon · Gradio | [HF Space →](https://huggingface.co/spaces/) *(deploy guide)* |
 
-> **"Live demo"** links go live once you follow [`docs/DEPLOY.md`](./docs/DEPLOY.md) and add the Hugging Face Space URL back into this table. The repo ships with everything else — code, requirements, Space configs, and `.env.example` templates.
+> **3 of 8 demos are live** on Hugging Face Spaces under [`Life1Ok`](https://huggingface.co/Life1Ok) — projects 1, 3, and 7. The Space owner sets `OPENAI_API_KEY` in each Space's *Settings → Variables and secrets* (and optionally `SENDGRID_API_KEY` for the Deep Research email step, or `PUSHOVER_TOKEN`/`PUSHOVER_USER` for the Career Twin notifications). The remaining five projects (2, 4, 5, 6, 8) are runnable locally per [`docs/DEPLOY.md`](./docs/DEPLOY.md).
 
 ---
 

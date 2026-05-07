@@ -59,3 +59,6 @@ tickets.db*
 04_stock_picker/output/
 04_stock_picker/report.md
 04_stock_picker/_companion_financial_researcher/output/
+
+# Local HF Space staging area (deployed via huggingface_hub)
+tmp/
