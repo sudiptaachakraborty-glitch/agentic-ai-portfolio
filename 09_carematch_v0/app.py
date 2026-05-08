@@ -234,11 +234,15 @@ def render_history(accepted: List[str]) -> str:
 
 def advance(direction: str, request, matches, idx, accepted):
     """direction in {'accept', 'pass', 'skip'}."""
+    matches = matches or []
+    accepted = list(accepted or [])
+    idx = idx or 0
+    request = request or {}
     if not matches:
         return request, matches, idx, accepted, None, EMPTY_CARD, "", render_history(accepted)
     current = matches[idx]
     if direction == "accept":
-        accepted = list(accepted) + [f"{current['name']} ({current['city']}, ${current['hourly_rate']}/hr)"]
+        accepted = accepted + [f"{current['name']} ({current['city']}, ${current['hourly_rate']}/hr)"]
     new_idx = idx + 1
     if new_idx >= len(matches):
         done_msg = (
@@ -274,10 +278,16 @@ see a transparent payout, and accept with one tap.
 """
     )
 
-    request_state = gr.State(value={})
-    matches_state = gr.State(value=[])
-    idx_state = gr.State(value=0)
-    accepted_state = gr.State(value=[])
+    # NOTE: gr.State() must NOT use {} or [] as a default value — those defaults
+    # serialise to a JSON-Schema with `additionalProperties: true` (or schema=True),
+    # which trips a bug in gradio_client.utils.json_schema_to_python_type
+    # ("argument of type 'bool' is not iterable") and breaks the frontend's API
+    # introspection so click handlers fail with "No API found". Using None as the
+    # default works fine; we coerce to {}/[] inside the callbacks below.
+    request_state = gr.State()
+    matches_state = gr.State()
+    idx_state = gr.State(0)
+    accepted_state = gr.State()
 
     with gr.Row():
         with gr.Column(scale=1):
